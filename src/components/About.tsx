@@ -1,7 +1,7 @@
 export function About() {
   return (
     <div>
-      <section className="flex p-12 gap-20 " id="about">
+      <section className="flex m-12 gap-20 lg:mx-16 " id="about">
         <img className="hidden w-1/5 rounded-3xl xl:block" src={"./macbook.jpg"} />
         <div className="bg-[#4e4d4a] p-5 rounded-3xl">
           <h2 className="text-center text-2xl text-white mb-5 font-bold">Sobre mim</h2>

@@ -11,8 +11,8 @@ const dadosProjetos = [
     descricao: "Este projeto trata-se de um site para intercambio linguístico, onde você pode encontrar pessoas que falam a língua que você deseja aprender e que desejam aprender a língua que você fala. O site foi desenvolvido com Next.js e PostgresSQL",
     imagem: "/projects/Verbalize.png",
     tag: ["Todos", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/PedroHSiqueira/Next_Verbalise_Frontend",
+    previewUrl: "https://verbalize-senac.vercel.app/",
   },
   {
     id: 2,
@@ -20,8 +20,8 @@ const dadosProjetos = [
     descricao: "Este projeto é uma página web simples e elegante para exibir carros disponíveis para venda, construída utilizando React com Vite como empacotador (bundler). A interface do usuário é aprimorada com Tailwind CSS, proporcionando um design limpo e responsivo",
     imagem: "/projects/CarSale.png",
     tag: ["Todos", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/PedroHSiqueira/Car-Sale-React.js",
+    previewUrl: "https://car-sale-react-js.vercel.app/",
   },
   {
     id: 3,
@@ -29,18 +29,27 @@ const dadosProjetos = [
     descricao: "o projeto tem como intuito mantê-lo informado sobre as condições meteorológicas atuais e futuras, onde quer que você esteja. Com uma interface elegante e intuitiva, este aplicativo desenvolvido em Flutter oferece acesso rápido e fácil a dados precisos de clima, alimentados pela robusta API da OpenWeather",
     imagem: "/projects/weather_app.png",
     tag: ["Todos", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/PedroHSiqueira/Flutter_Weather_App",
+    previewUrl: "https://github.com/PedroHSiqueira/Flutter_Weather_App",
   },
   {
     id: 4,
     titulo: "Pokemon Terminal 🏃‍♂️",
     descricao: "Este projeto é uma implementação do clássico jogo Pokémon para ser jogado no terminal do Windows. O jogo é escrito em TypeScript e oferece uma experiência de jogo de console simples e divertida para os fãs de Pokémon.",
     imagem: "/projects/pokemon.png",
-    tag: ["Todos", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  }
+    tag: ["Todos", "Backend"],
+    gitUrl: "https://github.com/PedroHSiqueira/Pokemon-Terminal",
+    previewUrl: "https://github.com/PedroHSiqueira/Pokemon-Terminal",
+  },
+  {
+    id: 5,
+    titulo: "Chatbot Ollama 🤖",
+    descricao: "Este projeto é um chatbot de IA que pode responder a perguntas simples, foi construido com Python e a LLM (Large Language Model) Llama3, que é uma versão mais leve e eficiente do GPT-3, onde você pode conversar com o chatbot e obter respostas para suas perguntas.",
+    imagem: "/projects/chatbot.png",
+    tag: ["Todos", "Backend"],
+    gitUrl: "https://github.com/PedroHSiqueira/Ollama_Chatbot",
+    previewUrl: "https://github.com/PedroHSiqueira/Ollama_Chatbot",
+  },
 ];
 
 const SecaoProjetos = () => {
@@ -82,6 +91,11 @@ const SecaoProjetos = () => {
           nome="Mobile"
           selecionado={tag === "Mobile"}
         />
+        <ProjectTag
+          onClick={handleTagChange}
+          nome="Backend"
+          selecionado={tag === "Backend"}
+        />
       </div>
       <ul ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
         {projetosFiltrados.map((projeto, index) => (
@@ -98,6 +112,8 @@ const SecaoProjetos = () => {
                 titulo: projeto.titulo,
                 descricao: projeto.descricao,
                 imgUrl: projeto.imagem,
+                gitUrl: projeto.gitUrl,
+                previewUrl: projeto.previewUrl,
               }}
             />
           </motion.li>
