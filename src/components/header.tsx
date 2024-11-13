@@ -12,8 +12,8 @@ export default function Cabecalho() {
     setClicado(!clicado);
   };
   return (
-    <div className="bg-[#4e4d4a] px-5 sticky z-10">
-      <header className="text-white flex py-7 items-center justify-between ">
+    <div className="bg-[#4e4d4a] px-5 sticky top-[0.1px] z-10">
+      <header className="text-white  flex py-7 items-center justify-between ">
         <a href="#" className="text-2xl">
           Pedro Siqueira<span className="text-[#e3b12b]">.</span>
         </a>
