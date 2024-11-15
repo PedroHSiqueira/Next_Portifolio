@@ -5,9 +5,9 @@ export function About() {
         <img className="hidden w-1/5 rounded-3xl xl:block" src={"./macbook.jpg"} />
         <div className="bg-[#4e4d4a] p-5 rounded-3xl">
           <h2 className="text-center text-2xl text-white mb-5 font-bold">Sobre mim</h2>
-          <p className="text-white">Sou um programador apaixonado pelo 𝐃𝐞𝐬𝐞𝐧𝐯𝐨𝐥𝐯𝐢𝐦𝐞𝐧𝐭𝐨 𝐝𝐞 𝐅𝐮𝐥𝐥-𝐬𝐭𝐚𝐜𝐤. desenvolvi habilidades sólidas em Javascript , além de uma profunda compreensão de 𝐑𝐞𝐚𝐜𝐭.𝐣𝐬, além de Node.js e banco de dados SQL. </p><br />
-          <p className="text-white">No back-end,  tive o primeiro contato apartir de experiencias pessoas, inicialmente com a linguagem Kotlin, e atualmente trabalhando com o 𝐏𝐲𝐭𝐡𝐨𝐧.</p><br />
-          <p className="text-white">Além de possuir interesse na aréa do 𝐃𝐞𝐬𝐞𝐧𝐯𝐨𝐥𝐯𝐢𝐦𝐞𝐧𝐭𝐨 𝐌𝐨𝐛𝐢𝐥𝐞, utilizando o Framework 𝐅𝐥𝐮𝐭𝐭𝐞𝐫, aliado a linguagem Dart, estou constantemente buscando aprimorar minhas habilidades em UI/UX design e desenvolvimento de aplicativos móveis, sempre explorando novas tecnologias e metodologias para aprimorar minhas habilidades.</p>
+          <p className="text-white">Olá 👋! Me chamo Pedro Henrique estou no caminho de me tornar um Desenvolvedor Back-end, mas que passou por experiências com desenvolvimento Full-stack.</p><br />
+          <p className="text-white">Em 2024, iniciei no mercado de trabalho como estagiário de desenvolvimento, onde posso aprimorar minha habilidades com a programação, utilizando Java no dia a dia da empresa procuro maneiras de solucionar problemas de forma mais eficientes, novas implementações para o sistema, novos relatórios, novas telas, entre outras coisas</p><br />
+          <p className="text-white">Atualmente sou estudante de Análise e desenvolvimento de sistemas, onde estou cursando o quarto semestre, foi na graduação onde aprendi a como funciona o mundo da tecnologia, banco de dados, e Programação Orientada a Objeto, que foram de grande ajuda para eu chegar aonde estou atualmente </p>
         </div>
       </section>
     </div>
