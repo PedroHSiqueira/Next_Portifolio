@@ -99,13 +99,14 @@ const SecaoProjetos = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          nome="Mobile"
-          selecionado={tag === "Mobile"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
           nome="Backend"
           selecionado={tag === "Backend"}
+        />
+        
+        <ProjectTag
+          onClick={handleTagChange}
+          nome="Mobile"
+          selecionado={tag === "Mobile"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
