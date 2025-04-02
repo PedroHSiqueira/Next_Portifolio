@@ -87,3 +87,7 @@ body {
 .customModal {
   background: #693f94;
 }
+
+* {
+  scroll-behavior: smooth;
+}

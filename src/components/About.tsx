@@ -1,30 +1,84 @@
-import { motion, useInView } from "framer-motion";
-
-const cardVariants = {
-  initial: { y: 40, opacity: 0 },
-  animate: { y: 0, opacity: 1 },
-};
+import { TypeAnimation } from "react-type-animation";
+import { useLottie } from "lottie-react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import AnimationData from "../assets/animation/phoneAnimation.json";
 
 export function About() {
+  const opcoes = {
+    animationData: AnimationData,
+    loop: true,
+  };
+
+  const cardVariants = {
+    initial: { y: 40, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
+
+  const { View } = useLottie(opcoes);
   return (
-    <motion.div
+    <>
+      <motion.section
         variants={cardVariants}
         initial="initial"
         animate={"animate"}
-        transition={{ duration: 0.3, delay:  0.4 }}
+        transition={{ duration: 0.3, delay: 0.25 }}
         viewport={{
-             margin: "-200px",
-                    once: false,
-                }} >
-      <section className="flex m-12 gap-20 lg:mx-16 " id="about">
-        <img className="hidden w-1/5 rounded-3xl border-2 border-black xl:block shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]" src={"./macbook.jpg"}  alt={"Macbook"}/>
-        <div className="bg-gray-600 p-8 rounded-3xl shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]">
-          <h2 className="text-center text-2xl text-white mb-5 font-bold">Sobre mim</h2>
-          <p className="text-white">Olá 👋! Me chamo Pedro Henrique estou no caminho de me tornar um Desenvolvedor Back-end, mas que passou por experiências com desenvolvimento Full-stack.</p><br />
-          <p className="text-white">Em 2024, iniciei no mercado de trabalho como estagiário de desenvolvimento, onde posso aprimorar minha habilidades com a programação, utilizando Java no dia a dia da empresa procuro maneiras de solucionar problemas de forma mais eficientes, novas implementações para o sistema, novos relatórios, novas telas, entre outras coisas</p><br />
-          <p className="text-white">Atualmente sou estudante de Análise e desenvolvimento de sistemas, onde estou cursando o quarto semestre, foi na graduação onde aprendi a como funciona o mundo da tecnologia, banco de dados, e Programação Orientada a Objeto, que foram de grande ajuda para eu chegar aonde estou atualmente </p>
+          margin: "-200px",
+          once: false,
+        }}
+        className="relative h-full w-full py-16 lg:px-10"
+      >
+        <div className="flex flex-col md:flex-row justify-around">
+          <div className="col-span-8 place-self-center justify-self-start text-center sm:text-left">
+            <h3 className="text-2xl font-bold text-[#fffffe]">Olá 👋!</h3>
+            <h1 className="mb-4 text-2xl font-extrabold text-[#fffffe] sm:text-3xl lg:text-5xl lg:leading-normal">
+              <span>Sou </span>
+              <TypeAnimation className="text-[#7f5af0]" sequence={["Pedro Siqueira", 1000, "Dev Back-end", 1000]} wrapper="span" speed={50} repeat={Infinity} />
+            </h1>
+            <p className="mb-6 text-xs text-[#94a1b2] sm:text-lg">Mas possuo experiência com desenvolvimento Full-stack e Mobile</p>
+            <div className="flex gap-5 justify-center md:justify-normal">
+              <Button
+                className="z-40 cursor-pointer bg-[#5D3FD3] p-6 font-semibold text-white shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
+                variant="outline"
+                onClick={() => {
+                  alert("Em breve");
+                }}
+              >
+                Contato
+              </Button>
+              <a download={true} href="./pdf/Curriculo.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center cursor-pointer bg-gray-200 p-3 text-sm text-center font-semibold text-black border-[#fffffe] rounded-md shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] hover:bg-[#5D3FD3] hover:text-[#fffffe]">
+                Baixar Curriculo
+              </a>
+            </div>
+          </div>
+          <div className="col-span-4 mt-4 flex items-center justify-center place-self-center lg:mt-0">
+            <div className="w-4/6">{View}</div>
+          </div>
         </div>
-      </section>
-    </motion.div>
+      </motion.section>
+      <motion.section
+        variants={cardVariants}
+        initial="initial"
+        animate={"animate"}
+        transition={{ duration: 0.3, delay: 0.4 }}
+        className="p-5 bg-[#242629]"
+        viewport={{
+          margin: "-200px",
+          once: false,
+        }}
+      >
+        <section className="flex gap-20 m-12 lg:mx-16" id="about">
+          <img className="hidden w-1/5 rounded-3xl border-2 border-black xl:block" src={"./macbook.jpg"} alt={"Macbook"} />
+          <div className="p-8 bg-[#16161a] rounded-3xl shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]">
+            <h2 className="mb-5 text-2xl font-bold text-center text-[#fffffe]">Sobre mim</h2>
+            <p className="text-[#94a1b2]">Olá 👋! Me chamo Pedro Henrique e sou um Desenvolvedor Back-end, mas que passou por experiências com desenvolvimento Full-stack.</p>
+            <br />
+            <p className="text-[#94a1b2]">Em 2023 iniciei com estudante de Análise e Desenvolvimento de Sistemas, Foi na graduação onde aprendi como funciona o mundo da tecnologia, incluindo bancos de dados relacionais como PostgreSQL, e Programação Orientada a Objeto, conhecimentos fundamentais que me ajudaram a chegar onde estou hoje. Paralelamente, estou me aprofundando no framework Spring Boot para Java, o que tem expandido significativamente meu conjunto de habilidades para desenvolvimento de aplicações web robustas e escaláveis.</p>
+            <br />
+          </div>
+        </section>
+      </motion.section>
+    </>
   );
 }

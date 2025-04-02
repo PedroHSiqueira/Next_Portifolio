@@ -1,6 +1,6 @@
 import "./globals.css";
 import Footer from "@/components/footer";
-import Header from "@/components/header";
+import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,9 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="bg-[#F5F5F5]">
-        <Header />
+    <html lang="pt-br">
+       <body className={`bg-[#16161a]`}>
+        <Navbar />
         {children}
         <Footer />
       </body>
