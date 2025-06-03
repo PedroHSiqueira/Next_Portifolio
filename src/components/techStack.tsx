@@ -18,13 +18,8 @@ export function Tecnologies() {
       }}
       id="tech"
     >
-      <h1 className="text-center text-2xl font-bold text-[#fffffe] bg-[#242629] pb-10">
-        Tech Stack |
-      </h1>
-      <div
-        id="tecnologia"
-        className="grid grid-cols-2 gap-10 p-10 mx-20 bg-[#16161a] rounded-3xl justify-around sm:grid-cols-5   md:grid-cols-10 lg:mx-0 lg:rounded-none"
-      >
+      <h1 className="text-center text-2xl font-bold text-[#fffffe] bg-[#242629] pb-10">Tech Stack |</h1>
+      <div id="tecnologia" className="grid grid-cols-2 gap-10 p-10 mx-20 bg-[#16161a] rounded-3xl justify-around sm:grid-cols-5   md:grid-cols-10 lg:mx-0 lg:rounded-none">
         <div className="flex gap-y-5 flex-col justify-center items-center">
           <img className="w-16" src={"./tecnologies/java.svg"} />
           <p className="text-[#fffffe]">Java</p>
@@ -58,7 +53,7 @@ export function Tecnologies() {
           <p className="text-[#fffffe]">MySQL</p>
         </div>
         <div className="flex gap-y-5 flex-col justify-center items-center">
-          <img className="w-16" src={"./tecnologies/postgresql.svg"}/>
+          <img className="w-16" src={"./tecnologies/postgresql.svg"} />
           <p className="text-[#fffffe]">PostgreSQL</p>
         </div>
         <div className="flex gap-y-5 flex-col justify-center items-center">

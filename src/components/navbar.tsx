@@ -5,6 +5,7 @@ import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
+import { Code } from "lucide-react";
 
 export default function Navbar() {
   const [clicado, setClicado] = useState(false);
@@ -13,15 +14,17 @@ export default function Navbar() {
     setClicado(!clicado);
   };
   return (
-    <div className="sticky top-[0.1px] z-50 bg-[#16161a] px-5 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px]">
+    <div className="fixed top-0 left-0 px-5 w-full z-50 bg-[#16161a] shadow-[0_20px_10px_-15px_rgba(0,0,0,0.1)]">
       <header className="flex items-center justify-between py-7 text-black">
-        <a href="#" className="text-2xl font-black text-[#7f5af0]">
-          Pedro Siqueira<span className="text-white">.</span>
-        </a>
+        <div className="flex items-center gap-5">
+          <div className="w-8 h-8 bg-gradient-to-br from-purple-700 to-purple-950 rounded-full flex items-center justify-center">
+            <Code className="w-4 h-4 text-white" />
+          </div>
+          <a href="#" className="text-2xl font-black text-[#7f5af0]">
+            Pedro Siqueira<span className="text-white">.</span>
+          </a>
+        </div>
         <nav className="hidden gap-10 text-xl lg:flex items-center">
-          <Link className="text-[#fffffe] hover:text-[#7f5af0]" href="#sobre">
-            Sobre mim
-          </Link>
           <Link
             className="text-[#fffffe] hover:text-[#7f5af0] scroll-smooth"
             href="#tecnologia"
@@ -53,11 +56,11 @@ export default function Navbar() {
             Projetos
           </Link>
           <div className="flex items-center gap-5">
-            <a href="https://github.com/PedroHSiqueira" target="_blank">
-              <FaGithub size={38} color="#fffffe" />
+            <a href="https://github.com/PedroHSiqueira" target="_blank" className="transition-colors duration-200 hover:text-[#7f5af0] text-[#fffffe]">
+              <FaGithub size={30} />
             </a>
-            <a href="https://www.linkedin.com/in/phasiqueira/" target="_blank">
-              <FaLinkedin size={38} color="#fffffe" />
+            <a href="https://www.linkedin.com/in/phasiqueira/" target="_blank" className="transition-colors duration-200 hover:text-[#7f5af0] text-[#fffffe]">
+              <FaLinkedin size={30} />
             </a>
           </div>
           <div>
@@ -70,7 +73,7 @@ export default function Navbar() {
           <button className="inline-flex items-center justify-center rounded-b-md p-2 text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" onClick={abrirNavbar}>
             {clicado ? (
               <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" color="#fffffe"/>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" color="#fffffe" />
               </svg>
             ) : (
               <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
