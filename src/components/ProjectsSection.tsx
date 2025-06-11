@@ -32,8 +32,18 @@ const dadosProjetos = [
     gitUrl: "https://github.com/PedroHSiqueira/Next_Verbalise_Frontend",
     previewUrl: "https://verbalize-senac.vercel.app/",
   },
+
   {
     id: 4,
+    titulo: "Reino de Yemanjá Bocci 🏖️",
+    descricao: "Este projeto se trata de um freelance de um site para uma casa religiosa, onde você pode encontrar informações sobre a casa, serviços oferecidos, marcar consultas e muito mais. O site foi desenvolvido com React.js e Tailwind CSS, proporcionando uma experiência de usuário fluida e responsiva.",
+    imagem: "/projects/iemanja.jpg",
+    tag: ["Todos", "Web"],
+    gitUrl: null,
+    previewUrl: "https://www.yalorixagenifferdeiemanja.com/",
+  },
+  {
+    id: 5,
     titulo: "Aplicativo de Clima 🌧️",
     descricao: "o projeto tem como intuito mantê-lo informado sobre as condições meteorológicas atuais e futuras, onde quer que você esteja. Com uma interface elegante e intuitiva, este aplicativo desenvolvido em Flutter oferece acesso rápido e fácil a dados precisos de clima, alimentados pela robusta API da OpenWeather",
     imagem: "/projects/weather_app.png",
@@ -42,7 +52,7 @@ const dadosProjetos = [
     previewUrl: "https://github.com/PedroHSiqueira/Flutter_Weather_App",
   },
   {
-    id: 5,
+    id: 6,
     titulo: "Pokemon Terminal 🏃‍♂️",
     descricao: "Este projeto é uma implementação do clássico jogo Pokémon para ser jogado no terminal do Windows. O jogo é escrito em TypeScript e oferece uma experiência de jogo de console simples e divertida para os fãs de Pokémon.",
     imagem: "/projects/pokemon.png",
@@ -51,7 +61,7 @@ const dadosProjetos = [
     previewUrl: "https://github.com/PedroHSiqueira/Pokemon-Terminal",
   },
   {
-    id: 6,
+    id: 7,
     titulo: "MileStone Motors 🚗",
     descricao: "Este projeto é uma página web simples e elegante para exibir carros disponíveis para venda, construída utilizando React com Vite como empacotador (bundler). A interface do usuário é aprimorada com Tailwind CSS, proporcionando um design limpo e responsivo",
     imagem: "/projects/CarSale.png",
@@ -88,17 +98,19 @@ const SecaoProjetos = () => {
       </div>
       <ul ref={ref} className="grid gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
         {projetosFiltrados.map((projeto, index) => (
-          <motion.li key={index} variants={cardVariants} initial="initial" animate={isInView ? "animate" : "initial"} transition={{ duration: 0.3, delay: index * 0.4 }}>
-            <ProjectCard
-              key={projeto.id}
-              data={{
-                titulo: projeto.titulo,
-                descricao: projeto.descricao,
-                imgUrl: projeto.imagem,
-                gitUrl: projeto.gitUrl,
-                previewUrl: projeto.previewUrl,
-              }}
-            />
+          <motion.li key={index} variants={cardVariants} initial="initial" animate={isInView ? "animate" : "initial"} transition={{ duration: 0.25, delay: index * 0.25 }} className="flex h-full">
+            <div className="flex flex-col flex-1 h-full">
+              <ProjectCard
+                key={projeto.id}
+                data={{
+                  titulo: projeto.titulo,
+                  descricao: projeto.descricao,
+                  imgUrl: projeto.imagem,
+                  gitUrl: projeto.gitUrl ?? "",
+                  previewUrl: projeto.previewUrl,
+                }}
+              />
+            </div>
           </motion.li>
         ))}
       </ul>
