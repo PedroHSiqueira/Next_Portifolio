@@ -69,6 +69,15 @@ const dadosProjetos = [
     gitUrl: "https://github.com/PedroHSiqueira/Car-Sale-React.js",
     previewUrl: "https://car-sale-react-js.vercel.app/",
   },
+  {
+    id: 8,
+    titulo: "MagicFridge AI",
+    descricao: "uma Geladeira para guardar alimentos e gerar um receita a partir dos itens guardados, usando Inteligência artificial [ ChatGPT e Gemini], usando Java e seu Framework Spring Boot",
+    imagem: "/projects/receitas.jpg",
+    tag: ["Todos", "Backend"],
+    gitUrl: "https://github.com/PedroHSiqueira/MagicFridgeAI_BJ",
+    previewUrl: "https://github.com/PedroHSiqueira/MagicFridgeAI_BJ",
+  },
 ];
 
 const SecaoProjetos = () => {
